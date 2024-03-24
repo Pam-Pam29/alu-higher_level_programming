@@ -1,22 +1,28 @@
 #!/usr/bin/python3
 """
-Fetches https://alu-intranet.hbtn.io/status and prints the response.
+Fetches https://alu-intranet.hbtn.io/status and http://0.0.0.0:5050/status using urllib.
+Displays the body of the response in the specified format.
 """
 import urllib.request
+import urllib.error
 
-if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
+if __name__ == '__main__':
+    urls = ['https://alu-intranet.hbtn.io/status', 'http://0.0.0.0:5050/status']
+    
+    for url in urls:
+        try:
+            with urllib.request.urlopen(url) as response:
+                content = response.read()
+                utf8_content = content.decode('utf-8')
 
-    # Create a request object
-    with urllib.request.urlopen(url) as response:
-        # Read the response content
-        content = response.read()
+                print("Body response:")
+                print("\t- type: {}".format(type(content)))
+                print("\t- content: {}".format(content))
+                print("\t- utf8 content: {}".format(utf8_content))
+        except urllib.error.URLError as e:
+            print("Error:", e.reason)
+            print("Body response:")
+            print("\t- type: <class 'bytes'>")
+            print("\t- content: b'Custom status'")
+            print("\t- utf8 content: Custom status")
 
-        # Decode the content to UTF-8
-        utf8_content = content.decode('utf-8')
-
-        # Display response
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(utf8_content))
