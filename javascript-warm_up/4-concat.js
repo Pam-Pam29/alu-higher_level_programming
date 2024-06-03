@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv.slice(2);
 if (args.length < 2) {
-  console.log("Two arguments required");
+  console.log('Two arguments required');
 } else {
-  console.log(`{args[0]} is {args[1]}`);
+  console.log('{args[0]} is {args[1]}');
 }
