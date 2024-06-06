@@ -1,6 +1,6 @@
 #!/usr/bin/node
-function sum (a, b) {
-  result = a + b;
+function sum(a, b) {
+  return a + b;
 }
 
 const num1 = parseInt(process.argv[2]);
