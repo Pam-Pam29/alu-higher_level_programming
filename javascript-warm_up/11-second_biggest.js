@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function secondLargest(args) {
+function secondLargest (args) {
   if (args.length === 0) {
     console.log(0);
   } else if (args.length === 1) {
