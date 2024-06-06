@@ -1,7 +1,9 @@
 #!/usr/bin/node
-let i = 0
-while( i <= 1 
-console.log ('C is fun' + 
-	'Python is cool' + 
-	'JavaScript is amazing');
-i++;)
+const code = ( 'C is fun ' +
+            'Python is cool' + 
+       'JavaScript is amazing');
+ let i = 0;
+while( i < code.length){
+console.log(code[i]);
+i++;
+}
