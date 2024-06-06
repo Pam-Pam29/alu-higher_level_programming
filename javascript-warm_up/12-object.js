@@ -5,7 +5,7 @@ function replaceValue (args) {
   } else {
     for (let i = 0; i < args.length; i++) {
       const num = parseInt(args[i]);
-      if (num === 12) {
+      if (args[i] === '12') {
         args[i] = '89';
       }
     }
