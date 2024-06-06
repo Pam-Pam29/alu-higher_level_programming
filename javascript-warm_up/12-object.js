@@ -1,10 +1,10 @@
 #!/usr/bin/node
-function replaceValue(args) {
+function replaceValue (args) {
   if (args.length === 0) {
     console.log(0);
   } else {
     for (let i = 0; i < args.length; i++) {
-      let num = parseInt(args[i]);
+      const num = parseInt(args[i]);
       if (num === 12) {
         args[i] = '89';
       }
