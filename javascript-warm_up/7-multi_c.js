@@ -7,4 +7,4 @@ let i = 0;
  } else { 
 	 console.log('Missing number of occurrences');
  }
-~         
+       
