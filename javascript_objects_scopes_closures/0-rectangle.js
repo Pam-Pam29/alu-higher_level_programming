@@ -1,4 +1,4 @@
- #!/usr/bin/node
+#!/usr/bin/node
 class rectangle  {
   constructor(height, width) {
     this.height = height;
